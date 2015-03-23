@@ -3,8 +3,8 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, :except => [:index, :show]
 
   def index
-    @user_posts = get_users_posts
-    @posts = get_posts
+    @user_posts = Post.where(user: current_user).order(created_at: :desc)
+    @posts = Post.order(created_at: :desc)
   end
 
   def new
@@ -25,17 +25,8 @@ class PostsController < ApplicationController
     @post = Post.find(params[:id])
   end
 
-
   def post_params
     params.require(:post).permit(:image, :title)
-  end
-
-  def get_users_posts
-    current_user ? current_user.posts.sort_by{ |p| p[:created_at] }.reverse : nil
-  end
-
-  def get_posts
-    Post.any? ? Post.all.sort_by{ |p| p[:created_at] }.reverse : nil
   end
 
 end
