@@ -15,6 +15,12 @@ class Post < ActiveRecord::Base
     comment
   end
 
+  def build_dig(user)
+    dig = digs.build
+    dig.user = user
+    dig
+  end
+
   def get_post_image_id(size)
     "post-#{title.gsub(" ","")}-image-#{size}"
   end
