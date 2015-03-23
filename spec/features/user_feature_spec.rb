@@ -32,9 +32,13 @@ feature 'user' do
       expect(page).to have_link('Sign out')
     end
 
-    it 'should not display a sign in link or a sign up link' do
+    it 'should not display a sign in link' do
       visit('/')
       expect(page).not_to have_link('Log in')
+    end
+
+    it 'should not display a sign up link' do
+      visit('/')
       expect(page).not_to have_link('Sign up')
     end
 
@@ -66,9 +70,6 @@ feature 'user' do
     it 'should sign the user out of their session' do
       click_link('Sign out')
       expect(page).to have_content 'Signed out successfully'
-      expect(page).to have_link 'Log in'
-      expect(page).to have_link 'Sign up'
-      expect(page).not_to have_link 'Sign out'
     end
 
 

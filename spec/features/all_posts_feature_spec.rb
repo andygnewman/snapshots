@@ -8,7 +8,7 @@ feature 'dislay all posts' do
       sign_up('test')
       new_post('My first Snapshot!')
       click_link 'Sign out'
-      expect(page).to have_content '1. My first Snapshot!, posted by test@example.com'
+      expect(page).to have_content 'My first Snapshot!, posted by test@example.com'
     end
 
     it 'should show the second one followed by the first one if two' do
@@ -18,11 +18,12 @@ feature 'dislay all posts' do
       sign_up('bob')
       new_post('Bobs first Snapshot!')
       click_link 'Sign out'
-      expect(page).to have_content '1. Bobs first Snapshot!, posted by bob@example.com'
-      expect(page).to have_content '2. Jims first Snapshot!, posted by jim@example.com'
+      within(:css, "section#most-recent-snapshots") do
+        expect(page.all('li')[0]).to have_content 'Bobs first Snapshot!, posted by bob@example.com'
+        expect(page.all('li')[1]).to have_content 'Jims first Snapshot!, posted by jim@example.com'
+      end
     end
 
   end
-
 
 end
