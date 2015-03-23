@@ -16,7 +16,8 @@ class DigsController < ApplicationController
     @post = Post.find(params[:post_id])
     dig = @post.build_dig(current_user)
     dig.save
-    redirect_to('/')
+    # redirect_to('/')
+    render json: {new_dig_count: @post.digs.count}
   end
 
 end
