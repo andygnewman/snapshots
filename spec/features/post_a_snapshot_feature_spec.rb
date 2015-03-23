@@ -23,4 +23,13 @@ feature 'posting a Snapshot' do
 
   end
 
+  context 'unauthenticated actions' do
+
+    scenario 'does not allow user to add a post when not signed in' do
+      visit('/posts/new')
+      expect(page).to have_content('Log in')
+    end
+
+  end
+
 end
