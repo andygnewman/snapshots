@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, :except => [:index, :show]
 
   def index
-    @user_posts = Post.where(user: current_user).order(created_at: :desc)
+    # @user_posts = Post.where(user: current_user).order(created_at: :desc)
     @posts = Post.order(created_at: :desc)
   end
 

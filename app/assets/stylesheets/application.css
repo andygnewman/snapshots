@@ -44,3 +44,8 @@ h1 {
   margin-top: auto;
   margin-bottom: auto;
 }
+
+ul {
+  padding-left: 20px;
+  list-style-type: square;
+}
