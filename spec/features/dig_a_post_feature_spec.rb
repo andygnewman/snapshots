@@ -28,21 +28,14 @@ feature 'a logged in user should be able to dig a post' do
       expect(page).to have_link('Dig this Snapshot!')
     end
 
-    it 'should redirect to the same page once clicked' do
-      click_link('Sign out')
-      sign_up('jim')
-      click_link('Dig this Snapshot!')
-      expect(current_path).to eq('/')
-    end
-
-    it 'should add to the dig count once clicked' do
+    it 'should add to the dig count once clicked', js: true do
       click_link('Sign out')
       sign_up('jim')
       click_link('Dig this Snapshot!')
       expect(page).to have_content('Digged 1 time')
     end
 
-    it 'should allow a user to dig a post only once' do
+    it 'should allow a user to dig a post only once', js: true do
       click_link('Sign out')
       sign_up('jim')
       click_link('Dig this Snapshot!')
