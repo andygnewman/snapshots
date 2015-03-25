@@ -6,6 +6,11 @@
 
 First solo project using Ruby on Rails to build a photo sharing 'Instagram' clone. I created Snapshot!
 
+### Heroku deployment
+---------------------
+
+See this on the web at [https://snapshotandy.herokuapp.com/] (https://snapshotandy.herokuapp.com/ Andy's Snapshot! - an Instagram clone)
+
 ### Technologies Used
 ---------------------
 
@@ -32,16 +37,12 @@ From the command line `$ rspec`
 
 - The power of the Rails framework, especially for creating applications based on relationship models, for example in this case a user has Snapshots!, can leave comments on other users Snapshots! and can 'dig' (or like) Snapshots!
 - However it needs a good understanding of how it is doing it - relational database / Active Record and routings (Model View Controller), so was glad to have undertaken projects in Sinatra / Postgres (DataMapper) to give a good grounding.
+- Getting AWS S3 working for storage of images.
 
 ### Things I would do to improve this project
 ---------------------------------------------
 
-- This was Behaviour Driven Development, with little Unit Test coverage of models / data handling, which I would seek to address.
-- Still some business logic in the controllers which should be moved into models.
-- Using the inbuilt devise functionality to authenticate users before specific actions (as there is vulnerability in users being able to navigate to these pages without logging in which would crash the system. (eg. - before_action :authenticate_user!, except => [] for comments, digs)
-- I didn't manage to get S3 storage working for the images (hence many image not founds), whilst the image files are being stored there, there is an issue in rendering them on the page.
 - Implement a federated log-in eg. through Twitter using Omniauth.
-- Implement AJAX for updating 'digging' a Snapshot! without page reload.
 
 ## Challenge Brief from Makers Academy
 ===================================
