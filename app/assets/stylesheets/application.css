@@ -53,3 +53,8 @@ ul {
 p {
   margin: 0;
 }
+
+input {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}

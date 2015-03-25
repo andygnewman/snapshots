@@ -1,6 +1,8 @@
 = form_for @post, html: {multipart: true} do |f|
   =f.label :image, 'Upload your Snapshot!'
   =f.file_field :image
+  %br
   =f.label :title, 'Your Snapshot! Title'
   =f.text_field :title
+  %br
   =f.submit 'Post your Snapshot!'
