@@ -35,8 +35,10 @@ feature 'your photos' do
       it 'should display the snapshots in order of most recent first' do
         new_post('My first Snapshot!')
         new_post('My second Snapshot!')
-        expect(page).to have_content '1. My second Snapshot!'
-        expect(page).to have_content '2. My first Snapshot!'
+        within(:css, "section#your-snapshots") do
+          expect(page.all('li')[0]).to have_content 'My second Snapshot!'
+          expect(page.all('li')[1]).to have_content 'My first Snapshot!'
+        end
       end
 
     end
