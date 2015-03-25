@@ -20,7 +20,7 @@ See this on the web at [https://snapshotandy.herokuapp.com/] (https://snapshotan
 - S3 AWS Web Storage for Images
 - Paperclip for file upload
 
-![Snapshot! Screenshot](https://github.com/andygnewman/instagram-challenge/blob/master/Snapshot%20Screenshot.png)
+![Snapshot! Screenshot](https://github.com/andygnewman/snapshots/blob/master/Snapshot%20Screenshot.png)
 
 ### To run the programme
 ------------------------
