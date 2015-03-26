@@ -23,9 +23,11 @@ See this on the web at [https://snapshotandy.herokuapp.com/] (https://snapshotan
 
 ![Snapshot! Screenshot](https://github.com/andygnewman/snapshots/blob/master/Snapshot%20Screenshot.png)
 
-### To run the programme
-------------------------
+### To run the programme locally
+--------------------------------
 
+Clone this repository
+Initiate the database `$ bin/rake db migrate`
 From the command line `$ rails server` then in the browser open [http://localhost:3000] (http://localhost:3000)
 
 ### To run the tests
