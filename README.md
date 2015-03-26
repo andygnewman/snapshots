@@ -9,12 +9,13 @@ First solo project using Ruby on Rails to build a photo sharing 'Instagram' clon
 ### Heroku deployment
 ---------------------
 
-See this on the web at [https://snapshotandy.herokuapp.com/] (https://snapshotandy.herokuapp.com/ Andy's Snapshot! - an Instagram clone)
+See this on the web at [https://snapshotandy.herokuapp.com/] (https://snapshotandy.herokuapp.com/)
 
 ### Technologies Used
 ---------------------
 
 - Ruby on Rails
+- Devise for user model and authentication
 - Rspec and Capybara for testing
 - HAML for HTML
 - S3 AWS Web Storage for Images
